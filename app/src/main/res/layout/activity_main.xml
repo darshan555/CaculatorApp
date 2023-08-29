@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/outputTV"
+        android:layout_width="342dp"
+        android:layout_height="234dp"
+        android:background="@drawable/edit_box_style"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:paddingTop="130dp"
+        android:paddingRight="20dp"
+        android:text="0"
+        android:textAlignment="textEnd"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="70sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.032" />
+
+    <Button
+        android:id="@+id/acBTN"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/upper_button_style"
+        android:onClick="onButtonClicked"
+        android:text="AC"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/powerBTN"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outputTV" />
+
+    <Button
+        android:id="@+id/powerBTN"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/upper_button_style"
+        android:onClick="onButtonClicked"
+        android:text="^"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/persentBTN"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/acBTN"
+        app:layout_constraintTop_toBottomOf="@+id/outputTV" />
+
+    <Button
+        android:id="@+id/persentBTN"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/upper_button_style"
+        android:onClick="onButtonClicked"
+        android:text="%"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/divisionBTN"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/powerBTN"
+        app:layout_constraintTop_toBottomOf="@+id/outputTV" />
+
+    <Button
+        android:id="@+id/divisionBTN"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/right_corner_button"
+        android:onClick="onButtonClicked"
+        android:text="/"
+        android:textColor="#F6F6F6"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/persentBTN"
+        app:layout_constraintTop_toBottomOf="@+id/outputTV" />
+
+    <Button
+        android:id="@+id/eightBTN"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/number_button_style"
+        android:onClick="onButtonClicked"
+        android:text="8"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/nineBTN"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/sevenBTN"
+        app:layout_constraintTop_toBottomOf="@+id/powerBTN" />
+
+    <Button
+        android:id="@+id/nineBTN"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/number_button_style"
+        android:onClick="onButtonClicked"
+        android:text="9"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/multpBTN"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/eightBTN"
+        app:layout_constraintTop_toBottomOf="@+id/persentBTN" />
+
+    <Button
+        android:id="@+id/multpBTN"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/right_corner_button"
+        android:onClick="onButtonClicked"
+        android:text="x"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/nineBTN"
+        app:layout_constraintTop_toBottomOf="@+id/divisionBTN" />
+
+    <Button
+        android:id="@+id/sumBTN"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/right_corner_button"
+        android:onClick="onButtonClicked"
+        android:text="+"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/threeBTN"
+        app:layout_constraintTop_toBottomOf="@+id/subBTN" />
+
+    <Button
+        android:id="@+id/subBTN"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/right_corner_button"
+        android:onClick="onButtonClicked"
+        android:text="-"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/sixBTN"
+        app:layout_constraintTop_toBottomOf="@+id/multpBTN" />
+
+    <Button
+        android:id="@+id/equalBTN"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/right_corner_button"
+        android:onClick="onButtonClicked"
+        android:text="="
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dotBTN"
+        app:layout_constraintTop_toBottomOf="@+id/sumBTN" />
+
+    <Button
+        android:id="@+id/twoBTN"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/number_button_style"
+        android:onClick="onButtonClicked"
+        android:text="2"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/threeBTN"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/oneBTN"
+        app:layout_constraintTop_toBottomOf="@+id/fiveBTN" />
+
+    <Button
+        android:id="@+id/fiveBTN"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/number_button_style"
+        android:onClick="onButtonClicked"
+        android:text="5"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/sixBTN"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fourBTN"
+        app:layout_constraintTop_toBottomOf="@+id/eightBTN" />
+
+    <Button
+        android:id="@+id/sixBTN"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/number_button_style"
+        android:onClick="onButtonClicked"
+        android:text="6"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/subBTN"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fiveBTN"
+        app:layout_constraintTop_toBottomOf="@+id/nineBTN" />
+
+    <Button
+        android:id="@+id/threeBTN"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/number_button_style"
+        android:onClick="onButtonClicked"
+        android:text="3"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/sumBTN"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/twoBTN"
+        app:layout_constraintTop_toBottomOf="@+id/sixBTN" />
+
+    <Button
+        android:id="@+id/dotBTN"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/number_button_style"
+        android:onClick="onButtonClicked"
+        android:text="."
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/equalBTN"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/zeroBTN"
+        app:layout_constraintTop_toBottomOf="@+id/threeBTN" />
+
+    <Button
+        android:id="@+id/zeroBTN"
+        android:layout_width="158dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/number_button_style"
+        android:onClick="onButtonClicked"
+        android:paddingLeft="20dp"
+        android:text="0"
+        android:textAlignment="textStart"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/dotBTN"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/twoBTN" />
+
+    <Button
+        android:id="@+id/oneBTN"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/number_button_style"
+        android:onClick="onButtonClicked"
+        android:text="1"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/twoBTN"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fourBTN" />
+
+    <Button
+        android:id="@+id/fourBTN"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/number_button_style"
+        android:onClick="onButtonClicked"
+        android:text="4"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/fiveBTN"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sevenBTN" />
+
+    <Button
+        android:id="@+id/sevenBTN"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/number_button_style"
+        android:onClick="onButtonClicked"
+        android:text="7"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/eightBTN"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/acBTN" />
+
+    <TextView
+        android:id="@+id/inputTV"
+        android:layout_width="307dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="24dp"
+        android:paddingRight="10sp"
+        android:text="0"
+        android:textAlignment="viewEnd"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/outputTV" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
